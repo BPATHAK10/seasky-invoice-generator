@@ -1,4 +1,4 @@
-import { AUTHOR_WEBSITE, BASE_URL } from "@/lib/variables";
+import { BASE_URL } from "@/lib/variables";
 
 export const ROOTKEYWORDS = [
     "invoice",
@@ -20,11 +20,6 @@ export const JSONLD = {
     mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${BASE_URL}/#website`,
-    },
-    author: {
-        "@type": "Person",
-        name: "Ali Abbasov",
-        url: AUTHOR_WEBSITE,
     },
     "@graph": [
         {

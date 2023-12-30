@@ -10,7 +10,6 @@ export const ENV = process.env.NODE_ENV;
  * Websites
  */
 export const BASE_URL = "https://invoify.vercel.app";
-export const AUTHOR_WEBSITE = "https://aliabb.vercel.app";
 
 /**
  * API endpoints
@@ -106,7 +105,7 @@ export const SHORT_DATE_OPTIONS: Intl.DateTimeFormatOptions = {
  */
 export const FORM_DEFAULT_VALUES = {
     sender: {
-        name: "",
+        name: "SEASKY CARGO SERVICE PVT. LTD",
         address: "",
         zipCode: "",
         city: "",
@@ -123,6 +122,9 @@ export const FORM_DEFAULT_VALUES = {
         country: "",
         email: "",
         phone: "",
+        po_number: "",
+        commodity: "",
+        incoterm: "",
         customInputs: [],
     },
     details: {
@@ -130,6 +132,14 @@ export const FORM_DEFAULT_VALUES = {
         invoiceNumber: "",
         invoiceDate: "",
         dueDate: "",
+        shipper: "",
+        consignee: "",
+        mawb: "",
+        hawb: "",
+        noofpcs: "",
+        grossweight: "",
+        chargableweight: "",
+        destination: "",
         items: [
             {
                 name: "",
@@ -158,6 +168,11 @@ export const FORM_DEFAULT_VALUES = {
             bankName: "",
             accountName: "",
             accountNumber: "",
+            bankAddress: "",
+            swiftCode: "",
+            branchAddress: "",
+            beneficiaryAddress: "",
+            beneficiary: "",
         },
         additionalNotes: "",
         paymentTerms: "",
@@ -188,12 +203,23 @@ export const FORM_FILL_VALUES = {
         country: "Canada",
         email: "janesmith@example.com",
         phone: "987-654-3210",
+        po_number: "PO197047, PO197048",
+        commodity: "Nepalese paper product",
+        incoterm: "EX-Works",
     },
     details: {
         invoiceLogo: "",
         invoiceNumber: "INV0001",
         invoiceDate: new Date(),
         dueDate: new Date(),
+        shipper: "KHADI PAPER",
+        consignee: "LUSH JAPAN G.K",
+        mawb: "285-0581-1934",
+        hawb: "SSCS00623",
+        noofpcs: "25",
+        grossweight: "342",
+        chargableweight: "342",
+        destination: "Narita, Japan",
         items: [
             {
                 name: "Product 1",
@@ -236,6 +262,11 @@ export const FORM_FILL_VALUES = {
             bankName: "Bank Inc.",
             accountName: "John Doe",
             accountNumber: "445566998877",
+            bankAddress: "Kathmandu",
+            swiftCode: "NIBLNPKT",
+            branchAddress: "Durbarmarg",
+            beneficiaryAddress: "Dholahiti",
+            beneficiary: "Seasky Cargo Service Pvt. Ltd.",
         },
         additionalNotes: "Thank you for your business",
         paymentTerms: "Net 30",

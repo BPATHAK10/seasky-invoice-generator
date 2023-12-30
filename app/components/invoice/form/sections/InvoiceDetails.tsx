@@ -7,7 +7,7 @@ import {
     FormInput,
     FormFile,
     Subheading,
-    TemplateSelector,
+    // TemplateSelector,
 } from "@/app/components";
 
 // Contexts
@@ -53,11 +53,52 @@ const InvoiceDetails = () => {
                         label={_t("form.steps.invoiceDetails.currency")}
                         placeholder="Select Currency"
                     />
+                    <FormInput
+                        name="details.shipper"
+                        label={_t("form.steps.invoiceDetails.shipper")}
+                        placeholder="Shipper"
+                    />
+                    <FormInput
+                        name="details.consignee"
+                        label={_t("form.steps.invoiceDetails.consignee")}
+                        placeholder="Consignee"
+                    />
+                    <FormInput
+                        name="details.mawb"
+                        label={_t("form.steps.invoiceDetails.mawb")}
+                        placeholder="MAWB"
+                    />
+                    <FormInput
+                        name="details.hawb"
+                        label={_t("form.steps.invoiceDetails.hawb")}
+                        placeholder="HAWB"
+                    />
+                    <FormInput
+                        name="details.noofpcs"
+                        label={_t("form.steps.invoiceDetails.noofpcs")}
+                        placeholder="Number of Pieces"
+                    />
+                    <FormInput
+                        name="details.grossweight"
+                        label={_t("form.steps.invoiceDetails.grossweight")}
+                        placeholder="Gross Weight"
+                    />
+                    <FormInput
+                        name="details.chargableweight"
+                        label={_t("form.steps.invoiceDetails.chargableweight")}
+                        placeholder="Chargable Weight"
+                    />
+                    <FormInput
+                        name="details.destination"
+                        label={_t("form.steps.invoiceDetails.destination")}
+                        placeholder="Destination"
+                    />
+
                 </div>
 
-                <div className="flex flex-col gap-2">
+                {/* <div className="flex flex-col gap-2">
                     <TemplateSelector />
-                </div>
+                </div> */}
             </div>
         </section>
     );

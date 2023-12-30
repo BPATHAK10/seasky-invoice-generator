@@ -4,41 +4,62 @@ import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+} from "@nextui-org/navbar";
+
 // Assets
-import Logo from "@/public/assets/img/invoify-logo.svg";
+import Logo from "@/public/assets/img/SeaskyLogo.svg";
 
 // ShadCn
 import { Card } from "@/components/ui/card";
 
 // Components
-import { DevDebug, LanguageSelector, ThemeSwitcher } from "@/app/components";
+import { DevDebug, ThemeSwitcher } from "@/app/components";
 
 const BaseNavbar = () => {
-    const devEnv = useMemo(() => {
-        return process.env.NODE_ENV === "development";
-    }, []);
+  const devEnv = useMemo(() => {
+    return process.env.NODE_ENV === "development";
+  }, []);
 
-    return (
-        <header className="lg:container z-[99]">
-            <nav>
-                <Card className="flex flex-wrap justify-between items-center px-5 gap-5">
-                    <Link href={"/"}>
-                        <Image
-                            src={Logo}
-                            alt="Invoify Logo"
-                            width={190}
-                            height={100}
-                            loading="eager"
-                        />
-                    </Link>
-                    {/* ? DEV Only */}
-                    {devEnv && <DevDebug />}
-                    <LanguageSelector />
-                    <ThemeSwitcher />
-                </Card>
-            </nav>
-        </header>
-    );
+  return (
+    <header className="lg:container z-[99]">
+      <Navbar className="">
+        <NavbarContent>
+          <NavbarBrand>
+            <Link href="/">
+              <Image
+                priority
+                src={Logo}
+                alt="SSC Logo"
+                width={50}
+                height={50}
+              />
+              <p className="font-bold text-inherit">SEASKY Cargo</p>
+            </Link>
+          </NavbarBrand>
+        </NavbarContent>
+        <NavbarContent>
+          <NavbarItem>INVOICE GENERATOR</NavbarItem>
+        </NavbarContent>
+        <NavbarContent className="hidden sm:flex gap-4" justify="end">
+          <NavbarItem>
+            {/* ? DEV Only */}
+            {devEnv && <DevDebug />}
+          </NavbarItem>
+          <NavbarItem>
+            <ThemeSwitcher />
+          </NavbarItem>
+        </NavbarContent>
+      </Navbar>
+    </header>
+  );
 };
 
 export default BaseNavbar;

@@ -39,7 +39,7 @@ const formatPriceToString = (price: number): string => {
 
     // Append fractional part only if it's not zero
     if (fractionalPart !== 0) {
-        result += ` and ${fractionalPart}/100`;
+        result += ` and ${fractionalPart} cents`;
     }
 
     // Handle the case when both integer and fractional parts are zero

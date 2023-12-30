@@ -19,6 +19,18 @@ const PaymentInformation = () => {
                     vertical
                 />
                 <FormInput
+                    name="details.paymentInformation.bankAddress"
+                    label={_t("form.steps.paymentInfo.bankAddress")}
+                    placeholder={_t("form.steps.paymentInfo.bankAddress")}
+                    vertical
+                />
+                <FormInput
+                    name="details.paymentInformation.swiftCode"
+                    label={_t("form.steps.paymentInfo.swiftCode")}
+                    placeholder={_t("form.steps.paymentInfo.swiftCode")}
+                    vertical
+                />
+                <FormInput
                     name="details.paymentInformation.accountName"
                     label={_t("form.steps.paymentInfo.accountName")}
                     placeholder={_t("form.steps.paymentInfo.accountName")}
@@ -28,6 +40,18 @@ const PaymentInformation = () => {
                     name="details.paymentInformation.accountNumber"
                     label={_t("form.steps.paymentInfo.accountNumber")}
                     placeholder={_t("form.steps.paymentInfo.accountNumber")}
+                    vertical
+                />
+                <FormInput
+                    name="details.paymentInformation.beneficiary"
+                    label={_t("form.steps.paymentInfo.beneficiary")}
+                    placeholder={_t("form.steps.paymentInfo.beneficiary")}
+                    vertical
+                />
+                <FormInput
+                    name="details.paymentInformation.beneficiaryAddress"
+                    label={_t("form.steps.paymentInfo.beneficiaryAddress")}
+                    placeholder={_t("form.steps.paymentInfo.beneficiaryAddress")}
                     vertical
                 />
             </div>

@@ -25,7 +25,10 @@
                 "phone": "Phone",
                 "addCustomInput": "Add Custom Input",
                 "sender": "Sender",
-                "receiver": "Receiver"
+                "receiver": "Receiver",
+                "po_number": "PO Number",
+                "commodity": "Commodity",
+                "incoterm": "Incoterm"
             },
             "invoiceDetails": {
                 "heading": "Invoice Details",
@@ -36,7 +39,15 @@
                 "invoiceNumber": "Invoice Number",
                 "issuedDate": "Issue Date",
                 "dueDate": "Due Date",
-                "currency": "Currency"
+                "currency": "Currency",
+                "shipper": "Shipper",
+                "consignee": "Consignee",
+                "mawb": "MAWB #",
+                "hawb": "HAWB #",
+                "noofpcs": "No of Pcs",
+                "grossweight": "Gross Weight",
+                "chargableweight": "Chargable Weight",
+                "destination": "Destination"
             },
             "lineItems": {
                 "heading": "Items",
@@ -52,8 +63,14 @@
             "paymentInfo": {
                 "heading": "Payment Information",
                 "bankName": "Bank Name",
+                "bankAddress": "Bank Address",
+                "branchAddress": "Branch Address",
                 "accountName": "Account Name",
-                "accountNumber": "Account Number"
+                "accountNumber": "Account Number",
+                "swiftCode": "Swift Code",
+                "beneficiary": "Beneficiary Name",
+                "beneficiaryAddress": "Beneficiary Address"
+
             },
             "summary": {
                 "heading": "Summary",

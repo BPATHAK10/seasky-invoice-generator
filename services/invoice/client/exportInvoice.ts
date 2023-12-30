@@ -16,6 +16,9 @@ export const exportInvoice = async (
     exportAs: ExportTypes,
     formValues: InvoiceType
 ) => {
+    console.log("exporting invoince with exportAs as:::", exportAs)
+    console.log("exporting invoince with values as:::", formValues)
+
     return fetch(`${EXPORT_INVOICE_API}?format=${exportAs}`, {
         method: "POST",
         body: JSON.stringify(formValues),
