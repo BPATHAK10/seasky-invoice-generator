@@ -75,7 +75,7 @@ export default function FinalPdf() {
                     Print
                 </BaseButton>
 
-                <BaseButton
+                {/* <BaseButton
                     tooltipLabel="Save invoice in website"
                     onClick={saveInvoice}
                     size="sm"
@@ -83,9 +83,9 @@ export default function FinalPdf() {
                 >
                     <BookmarkIcon className="w-5 h-5" />
                     Save
-                </BaseButton>
+                </BaseButton> */}
 
-                <SendPdfToEmailModal sendPdfToMail={sendPdfToMail}>
+                {/* <SendPdfToEmailModal sendPdfToMail={sendPdfToMail}>
                     <BaseButton
                         tooltipLabel="Send invoice PDF to mail"
                         size="sm"
@@ -94,7 +94,7 @@ export default function FinalPdf() {
                         <Mail className="w-5 h-5" />
                         Send to mail
                     </BaseButton>
-                </SendPdfToEmailModal>
+                </SendPdfToEmailModal> */}
             </div>
             <AspectRatio ratio={1 / 1.4}>
                 <iframe

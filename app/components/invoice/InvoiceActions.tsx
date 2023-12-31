@@ -37,7 +37,7 @@ const InvoiceActions = () => {
                 <div className="flex flex-col flex-wrap items-center gap-2">
                     <div className="flex flex-wrap gap-3">
                         {/* Load modal button */}
-                        <InvoiceLoaderModal>
+                        {/* <InvoiceLoaderModal>
                             <BaseButton
                                 variant="outline"
                                 tooltipLabel="Open load invoice menu"
@@ -46,10 +46,10 @@ const InvoiceActions = () => {
                                 <FolderUp />
                                 Load Invoice
                             </BaseButton>
-                        </InvoiceLoaderModal>
+                        </InvoiceLoaderModal> */}
 
                         {/* Export modal button */}
-                        <InvoiceExportModal>
+                        {/* <InvoiceExportModal>
                             <BaseButton
                                 variant="outline"
                                 tooltipLabel="Open load invoice menu"
@@ -58,7 +58,7 @@ const InvoiceActions = () => {
                                 <Import />
                                 Export Invoice
                             </BaseButton>
-                        </InvoiceExportModal>
+                        </InvoiceExportModal> */}
                     </div>
 
                     <div className="flex flex-wrap gap-3">

@@ -11,8 +11,8 @@ const useToasts = () => {
     const newInvoiceSuccess = () => {
         toast({
             variant: "default",
-            title: "Generated new invoice",
-            description: "Successfully created a new invoice",
+            title: "New invoice",
+            description: "New invoice created",
         });
     };
 

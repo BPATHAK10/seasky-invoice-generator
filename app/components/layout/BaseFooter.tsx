@@ -44,7 +44,7 @@ export default function BaseFooter() {
         <div className=" text-xl text-center">
           Designed and Developed with ♥ by:
         </div>
-        <Image src="/niyaloLogo.svg" alt="logo" width={70} height={70} />
+        <Image src="/assets/img/niyaloLogo.svg" alt="logo" width={70} height={70} />
       </section>
     </>
   );
