@@ -342,9 +342,14 @@ const InvoiceTemplate = (data: InvoiceType) => {
             <p className="font-semibold text-blue-600">Payment terms:</p>
             <p className="font-bold text-red-800">{details.paymentTerms}</p>
           </div> */}
-          <div className="my-2">
-            <span className="font-bold text-xl text-gray-800">
-              Please send the payment to this address
+          <div className="my-6">
+            <h1 className="font-bold text-xl text-black">SHREYASH SHARMA</h1>
+            <br />
+            <h2 className="font-semibold text-l text-black">Instruction to send telex transfer:</h2>
+            <br />
+            <h2 className="font-semibold text-l text-black">PAYMENT METHOD FOR INTERNATIONAL PARTICIPANTS DOLLAR ACCOUNT/ SWIFT TRANSFER</h2>
+            <br />
+            <span className="font-bold text-md text-gray-800">
               <p className="text-sm">
                 Bank Name: {details.paymentInformation?.bankName}
               </p>

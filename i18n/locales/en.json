@@ -47,7 +47,10 @@
                 "noofpcs": "No of Pcs",
                 "grossweight": "Gross Weight",
                 "chargableweight": "Chargable Weight",
-                "destination": "Destination"
+                "destination": "Destination",
+                "seaWayBillNo": "Sea Way Bill No",
+                "unicefRefNo": "UNICEF REFERENCE",
+                "noOfContainer": "No of Container"
             },
             "lineItems": {
                 "heading": "Items",

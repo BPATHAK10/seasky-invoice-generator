@@ -7,7 +7,7 @@ import {
     FormInput,
     FormFile,
     Subheading,
-    // TemplateSelector,
+    TemplateSelector,
 } from "@/app/components";
 
 // Contexts
@@ -64,6 +64,22 @@ const InvoiceDetails = () => {
                         placeholder="Consignee"
                     />
                     <FormInput
+                        name="details.seaWayBillNo"
+                        label={_t("form.steps.invoiceDetails.seaWayBillNo")}
+                        placeholder="Sea Way Bill No"
+                    />
+                    <FormInput
+                        name="details.unicefRefNo"
+                        label={_t("form.steps.invoiceDetails.unicefRefNo")}
+                        placeholder="UNICEF REFERENCE"
+                    />
+                    <FormInput
+                        name="details.noOfContainer"
+                        label={_t("form.steps.invoiceDetails.noOfContainer")}
+                        placeholder="Number of Container"
+                    />
+
+                    <FormInput
                         name="details.mawb"
                         label={_t("form.steps.invoiceDetails.mawb")}
                         placeholder="MAWB"
@@ -96,9 +112,9 @@ const InvoiceDetails = () => {
 
                 </div>
 
-                {/* <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2">
                     <TemplateSelector />
-                </div> */}
+                </div>
             </div>
         </section>
     );
