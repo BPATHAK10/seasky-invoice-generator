@@ -21,7 +21,7 @@ type SendPdfEmailProps = {
 };
 
 export default function SendPdfEmail({ invoiceNumber }: SendPdfEmailProps) {
-    const logo = `${BASE_URL}/assets/img/invoify-logo.png`;
+    const logo = `${BASE_URL}/assets/img/seasky-logo.jpg`;
     return (
         <Html>
             <Head />
@@ -39,7 +39,7 @@ export default function SendPdfEmail({ invoiceNumber }: SendPdfEmailProps) {
                                 height={120}
                             />
                             <Heading className="leading-tight">
-                                Thanks for using Invoify!
+                                INVOICE
                             </Heading>
 
                             <Text>
@@ -53,7 +53,7 @@ export default function SendPdfEmail({ invoiceNumber }: SendPdfEmailProps) {
                             <Text>
                                 Best Regards,
                                 <br />
-                                Invoify Team
+                                SEASKY CARGO SERVICE PVT. LTD
                             </Text>
                         </Section>
                     </Container>

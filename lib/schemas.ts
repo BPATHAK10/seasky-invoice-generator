@@ -166,9 +166,9 @@ const InvoiceDetailsSchema = z.object({
     chargableweight: fieldValidators.stringMin1,
     destination: fieldValidators.stringMin1,
     
-    seaWayBillNo: fieldValidators.stringMin1,
-    unicefRefNo: fieldValidators.stringMin1,
-    noOfContainer: fieldValidators.nonNegativeNumber,
+    seaWayBillNo: fieldValidators.stringMin1.optional(),
+    unicefRefNo: fieldValidators.stringMin1.optional(),
+    noOfContainer: fieldValidators.nonNegativeNumber.optional(),
 
     purchaseOrderNumber: fieldValidators.stringOptional,
     currency: fieldValidators.string,

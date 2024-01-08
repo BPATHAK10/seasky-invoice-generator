@@ -16,8 +16,17 @@ import { fileToBuffer } from "@/lib/helpers";
 import { NODEMAILER_EMAIL, NODEMAILER_PW } from "@/lib/variables";
 
 // Nodemailer transporter
+// const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//         user: NODEMAILER_EMAIL,
+//         pass: NODEMAILER_PW,
+//     },
+// });
+
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "",
+    port: 465,
     auth: {
         user: NODEMAILER_EMAIL,
         pass: NODEMAILER_PW,
@@ -49,7 +58,7 @@ export async function sendPdfToEmailService(
 
     try {
         const mailOptions: SendMailOptions = {
-            from: "Invoify",
+            from: "SEASKY CARGO SERVICE PVT. LTD",
             to: email,
             subject: `Invoice Ready: #${invoiceNumber}`,
             html: emailHTML,
