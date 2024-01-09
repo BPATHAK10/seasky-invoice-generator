@@ -137,7 +137,7 @@ const DiscountDetailsSchema = z.object({
 
 const TaxDetailsSchema = z.object({
     amount: fieldValidators.stringToNumberWithMax,
-    taxID: fieldValidators.string,
+    taxID: fieldValidators.string.optional(),
     amountType: fieldValidators.string,
 });
 

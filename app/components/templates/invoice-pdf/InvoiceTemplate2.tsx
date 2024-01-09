@@ -347,7 +347,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
             <p className="font-semibold text-blue-600">Payment terms:</p>
             <p className="font-bold text-red-800">{details.paymentTerms}</p>
           </div> */}
-          <div className="my-6">
+          <div className="my-6" style={{"pageBreakBefore":"always"}}>
             <h1 className="font-bold text-xl text-black">SHREYASH SHARMA</h1>
             <br />
             <h2 className="font-semibold text-l text-black">

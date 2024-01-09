@@ -20,10 +20,10 @@ const InvoiceSummary = () => {
             <Subheading>{_t("form.steps.summary.heading")}:</Subheading>
             <div className="flex flex-wrap gap-x-5 gap-y-10">
                 <div className="flex flex-col gap-3">
-                    <SignatureContextProvider>
-                        {/* Signature dialog */}
+                    {/* Signature dialog */}
+                    {/* <SignatureContextProvider>
                         <SignatureModal />
-                    </SignatureContextProvider>
+                    </SignatureContextProvider> */}
 
                     {/* Additional notes & Payment terms */}
                     <FormTextarea

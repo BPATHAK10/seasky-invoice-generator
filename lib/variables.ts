@@ -245,19 +245,19 @@ export const FORM_FILL_VALUES = {
         ],
         currency: "USD",
         language: "English",
-        taxDetails: {
-            amount: 15,
-            amountType: "percentage",
-            taxID: "987654321",
-        },
-        discountDetails: {
-            amount: 5,
-            amountType: "percentage",
-        },
-        shippingDetails: {
-            cost: 5,
-            costType: "percentage",
-        },
+        // taxDetails: {
+        //     amount: 15,
+        //     amountType: "percentage",
+        //     taxID: "987654321",
+        // },
+        // discountDetails: {
+        //     amount: 5,
+        //     amountType: "percentage",
+        // },
+        // shippingDetails: {
+        //     cost: 5,
+        //     costType: "percentage",
+        // },
         paymentInformation: {
             bankName: "Bank Inc.",
             accountName: "John Doe",

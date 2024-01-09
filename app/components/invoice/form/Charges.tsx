@@ -93,7 +93,7 @@ const Charges = () => {
                         </div>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <Label>{_t("form.steps.summary.shipping")}</Label>
 
                         <div>
@@ -106,7 +106,7 @@ const Charges = () => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="flex flex-col justify-center px-5 gap-y-3">
