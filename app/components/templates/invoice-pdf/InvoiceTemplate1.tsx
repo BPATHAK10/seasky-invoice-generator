@@ -343,6 +343,7 @@ const InvoiceTemplate = (data: InvoiceType) => {
             <p className="font-bold text-red-800">{details.paymentTerms}</p>
           </div> */}
           <div className="my-6" style={{"pageBreakBefore":"always"}}>
+          {/* <div className="my-6" > */}
             <h1 className="font-bold text-xl text-black">SHREYASH SHARMA</h1>
             <br />
             <h2 className="font-semibold text-l text-black">Instruction to send telex transfer:</h2>
@@ -355,6 +356,9 @@ const InvoiceTemplate = (data: InvoiceType) => {
               </p>
               <p className="text-sm">
                 Bank Address: {details.paymentInformation?.bankAddress}
+              </p>
+              <p className="text-sm">
+                Branch Address: {details.paymentInformation?.branchAddress}
               </p>
               <p className="text-sm">
                 Swift Code: {details.paymentInformation?.swiftCode}
