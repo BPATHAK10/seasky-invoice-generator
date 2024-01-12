@@ -3,10 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "node server.js",
         "build": "next build",
         "postinstall": "node node_modules/puppeteer/install.js",
-        "start": "next start",
+        "start": "node server.js",
         "lint": "next lint",
         "analyze": "cross-env ANALYZE=true next build"
     },
@@ -77,6 +77,8 @@
         "@types/react-signature-canvas": "^1.0.4",
         "@types/xml2js": "^0.4.13",
         "cross-env": "^7.0.3",
+        "eslint": "8.56.0",
+        "eslint-config-next": "14.0.4",
         "ignore-loader": "^0.1.2",
         "puppeteer": "^21.3.1"
     }

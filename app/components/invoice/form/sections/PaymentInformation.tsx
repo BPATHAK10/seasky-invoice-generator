@@ -25,6 +25,12 @@ const PaymentInformation = () => {
                     vertical
                 />
                 <FormInput
+                    name="details.paymentInformation.branchAddress"
+                    label={_t("form.steps.paymentInfo.branchAddress")}
+                    placeholder={_t("form.steps.paymentInfo.branchAddress")}
+                    vertical
+                />
+                <FormInput
                     name="details.paymentInformation.swiftCode"
                     label={_t("form.steps.paymentInfo.swiftCode")}
                     placeholder={_t("form.steps.paymentInfo.swiftCode")}
