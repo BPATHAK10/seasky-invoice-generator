@@ -38,22 +38,29 @@ export async function generatePdfService(req: NextRequest) {
     // Create a browser instance
     let browser;
 
-    // Launch the browser in production or development mode depending on the environment
-    if (ENV === "production") {
-      const puppeteer = await import("puppeteer-core");
-      browser = await puppeteer.launch({
-        args: chromium.args,
-        defaultViewport: chromium.defaultViewport,
-        executablePath: await chromium.executablePath(CHROMIUM_EXECUTABLE_PATH),
-        headless: chromium.headless === "new" ? true : chromium.headless,
-      });
-    } else if (ENV === "development") {
-      const puppeteer = await import("puppeteer");
-      browser = await puppeteer.launch({
-        args: ["--no-sandbox", "--disable-setuid-sandbox"],
-        headless: "new",
-      });
-    }
+    
+    const puppeteer = await import("puppeteer");
+    browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      headless: "new",
+    });
+    
+    // // Launch the browser in production or development mode depending on the environment
+    // if (ENV === "production") {
+    //   const puppeteer = await import("puppeteer-core");
+    //   browser = await puppeteer.launch({
+    //     args: chromium.args,
+    //     defaultViewport: chromium.defaultViewport,
+    //     executablePath: await chromium.executablePath(CHROMIUM_EXECUTABLE_PATH),
+    //     headless: chromium.headless === "new" ? true : chromium.headless,
+    //   });
+    // } else if (ENV === "development") {
+    //   const puppeteer = await import("puppeteer");
+    //   browser = await puppeteer.launch({
+    //     args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    //     headless: "new",
+    //   });
+    // }
 
     if (!browser) {
       throw new Error("Failed to launch browser");

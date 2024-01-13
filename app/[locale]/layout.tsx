@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 // Fonts
-import {
-    alexBrush,
-    dancingScript,
-    greatVibes,
-    outfit,
-    parisienne,
-} from "@/lib/fonts";
+// import {
+//     alexBrush,
+//     dancingScript,
+//     greatVibes,
+//     outfit,
+//     parisienne,
+// } from "@/lib/fonts";
 
 // Favicon
 import Favicon from "@/public/assets/favicon/favicon.ico";
 
 // Vercel Analytics
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
 
 // Next Intl
 import { NextIntlClientProvider } from "next-intl";
@@ -84,8 +84,11 @@ export default async function LocaleLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
                 />
             </head>
-            <body
+            {/* <body
                 className={`${outfit.className} ${dancingScript.variable} ${parisienne.variable} ${greatVibes.variable} ${alexBrush.variable} antialiased bg-slate-100 dark:bg-slate-800`}
+            > */}
+            <body
+                className={`antialiased bg-slate-100 dark:bg-slate-800`}
             >
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <Providers>
@@ -99,7 +102,8 @@ export default async function LocaleLayout({
                         <Toaster />
 
                         {/* Vercel analytics */}
-                        <Analytics />
+                        
+                        {/* <Analytics /> */}
                     </Providers>
                 </NextIntlClientProvider>
             </body>
