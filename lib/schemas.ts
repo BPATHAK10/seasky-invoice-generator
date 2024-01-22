@@ -51,7 +51,7 @@ const fieldValidators = {
     // Items
     quantity: z.coerce
         .number()
-        .min(1, { message: "Must be a number greater than 0" }),
+        .min(0, { message: "Quantity cannot be negative" }),
     unitPrice: z.coerce
         .number()
         .min(1, { message: "Must be a number greater than 0" }),
@@ -99,7 +99,7 @@ const InvoiceSenderSchema = z.object({
 const InvoiceReceiverSchema = z.object({
     name: fieldValidators.name,
     address: fieldValidators.address,
-    zipCode: fieldValidators.zipCode,
+    // zipCode: fieldValidators.zipCode,
     city: fieldValidators.city,
     country: fieldValidators.country,
     email: fieldValidators.email,
@@ -167,7 +167,7 @@ const InvoiceDetailsSchema = z.object({
     destination: fieldValidators.stringMin1,
     
     seaWayBillNo: fieldValidators.stringMin1.optional(),
-    unicefRefNo: fieldValidators.stringMin1.optional(),
+    RefNo: fieldValidators.stringMin1.optional(),
     noOfContainer: fieldValidators.nonNegativeNumber.optional(),
 
     purchaseOrderNumber: fieldValidators.stringOptional,

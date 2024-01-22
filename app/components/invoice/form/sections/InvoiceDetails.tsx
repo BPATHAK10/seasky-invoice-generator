@@ -69,9 +69,9 @@ const InvoiceDetails = () => {
                         placeholder="Sea Way Bill No"
                         />
                     <FormInput
-                        name="details.unicefRefNo"
-                        label={_t("form.steps.invoiceDetails.unicefRefNo")}
-                        placeholder="UNICEF REFERENCE"
+                        name="details.RefNo"
+                        label={_t("form.steps.invoiceDetails.RefNo")}
+                        placeholder="REFERENCE"
                         />
                     <FormInput
                         name="details.noOfContainer"

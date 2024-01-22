@@ -49,7 +49,7 @@
                 "chargableweight": "Chargable Weight",
                 "destination": "Destination",
                 "seaWayBillNo": "Sea Way Bill No",
-                "unicefRefNo": "UNICEF REFERENCE",
+                "RefNo": "REFERENCE",
                 "noOfContainer": "No of Container"
             },
             "lineItems": {

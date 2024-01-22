@@ -69,7 +69,7 @@ const InvoiceTemplate = (data: InvoiceType) => {
             {receiver.name}
           </h3>
           <address className="mt-2 not-italic text-gray-500">
-            {receiver.address}, {receiver.zipCode}
+            {receiver.address}
             <br />
             {receiver.city}, {receiver.country}
             <br />
@@ -237,7 +237,7 @@ const InvoiceTemplate = (data: InvoiceType) => {
                   <p className="text-xs text-gray-600">{item.description}</p>
                 </div>
                 <div className="border-b border-gray-300">
-                  <p className="text-gray-800">{item.quantity}</p>
+                  <p className="text-gray-800">{item.quantity == 0 ?'N/A':item.quantity}</p>
                 </div>
                 <div className="border-b border-gray-300">
                   <p className="text-gray-800">

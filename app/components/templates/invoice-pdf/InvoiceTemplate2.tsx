@@ -59,7 +59,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
             {receiver.name}
           </h3>
           <address className="mt-2 not-italic text-gray-500">
-            {receiver.address}, {receiver.zipCode}
+            {receiver.address}
             <br />
             {receiver.city}, {receiver.country}
             <br />
@@ -161,13 +161,13 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
                 </dd>
               </dl>
             )}
-            {details.unicefRefNo && (
+            {details.RefNo && (
               <dl className="grid sm:grid-cols-5 gap-x-3">
                 <dt className="col-span-3 font-semibold text-gray-800">
-                  UNICEF REFERENCE:
+                  REFERENCE:
                 </dt>
                 <dd className="col-span-2 text-gray-500">
-                    {details.unicefRefNo}
+                    {details.RefNo}
                 </dd>
               </dl>
             )}
