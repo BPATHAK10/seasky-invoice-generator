@@ -41,12 +41,12 @@ const BaseNavbar = () => {
                 width={50}
                 height={50}
               />
-              <p className="font-bold text-inherit">SEASKY Cargo</p>
+              {/* <p className="font-bold text-inherit">SEASKY Cargo</p> */}
             </Link>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent>
-          <NavbarItem>INVOICE GENERATOR</NavbarItem>
+          <NavbarItem><p className="font-bold text-3xl text-[#4FB7EB]">INVOICE GENERATOR</p></NavbarItem>
         </NavbarContent>
         <NavbarContent className="hidden sm:flex gap-4" justify="end">
           <NavbarItem>
