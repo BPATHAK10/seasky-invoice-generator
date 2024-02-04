@@ -18,6 +18,10 @@ export const GENERATE_PDF_API = "/api/invoice/generate";
 export const SEND_PDF_API = "/api/invoice/send";
 export const EXPORT_INVOICE_API = "/api/invoice/export";
 
+
+export const INVOICE_LOGO_PATH = "public/assets/img/SeaskyLogo.svg";
+export const INVOICE_LOGO_PATH_TEMPLATE = "/assets/img/SeaskyLogo.svg";
+
 /**
  * External API endpoints
  */

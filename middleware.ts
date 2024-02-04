@@ -1,7 +1,8 @@
 import createMiddleware from "next-intl/middleware";
 
 // Variables
-import { LOCALES, DEFAULT_LOCALE } from "@/lib/variables";
+import { LOCALES, DEFAULT_LOCALE, GENERATE_PDF_API } from "@/lib/variables";
+
 
 export default createMiddleware({
     // A list of all locales that are supported

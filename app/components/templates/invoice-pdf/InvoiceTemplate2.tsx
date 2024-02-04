@@ -7,7 +7,7 @@ import { InvoiceLayout } from "@/app/components";
 import { formatNumberWithCommas, isDataUrl } from "@/lib/helpers";
 
 // Variables
-import { DATE_OPTIONS } from "@/lib/variables";
+import { DATE_OPTIONS, INVOICE_LOGO_PATH_TEMPLATE } from "@/lib/variables";
 
 // Types
 import { InvoiceType } from "@/types";
@@ -27,15 +27,21 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
           <span className="mt-1 block text-gray-500">
             {details.invoiceNumber}
           </span>
-          {details.invoiceLogo && (
+          {details.invoiceLogo !== "" ? (
             <img
               src={details.invoiceLogo}
               width={140}
               height={100}
               alt={`Logo of ${sender.name}`}
             />
+          ) : (
+            <img
+              src={INVOICE_LOGO_PATH_TEMPLATE}
+              width={140}
+              height={100}
+              alt={`Logo of ${sender.name}`}
+            />
           )}
-
           <h1 className="mt-2 text-lg md:text-xl font-semibold text-blue-600">
             {sender.name}
           </h1>
@@ -113,7 +119,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
             </div>
           )}
         </div>
-        
+
         <div className="sm:text-right space-y-2 ">
           <div className="grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-2">
             <dl className="grid sm:grid-cols-6 gap-x-3">
@@ -157,7 +163,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
                   SEA WAY BILL NO.
                 </dt>
                 <dd className="col-span-2 text-gray-500">
-                    {details.seaWayBillNo}
+                  {details.seaWayBillNo}
                 </dd>
               </dl>
             )}
@@ -166,9 +172,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
                 <dt className="col-span-3 font-semibold text-gray-800">
                   REFERENCE:
                 </dt>
-                <dd className="col-span-2 text-gray-500">
-                    {details.RefNo}
-                </dd>
+                <dd className="col-span-2 text-gray-500">{details.RefNo}</dd>
               </dl>
             )}
             {details.noOfContainer && (
@@ -177,7 +181,7 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
                   Number of Container:
                 </dt>
                 <dd className="col-span-2 text-gray-500">
-                    {details.noOfContainer}
+                  {details.noOfContainer}
                 </dd>
               </dl>
             )}
@@ -347,8 +351,8 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
             <p className="font-semibold text-blue-600">Payment terms:</p>
             <p className="font-bold text-red-800">{details.paymentTerms}</p>
           </div> */}
-          <div className="my-6" style={{"pageBreakBefore":"always"}}>
-          {/* <div className="my-6"> */}
+          <div className="my-6" style={{ pageBreakBefore: "always" }}>
+            {/* <div className="my-6"> */}
             <h1 className="font-bold text-xl text-black">SHREYASH SHARMA</h1>
             <br />
             <h2 className="font-semibold text-l text-black">

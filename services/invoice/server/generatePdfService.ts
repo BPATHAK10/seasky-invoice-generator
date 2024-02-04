@@ -7,10 +7,53 @@ import chromium from "@sparticuz/chromium";
 import { getInvoiceTemplate } from "@/lib/helpers";
 
 // Variables
-import { CHROMIUM_EXECUTABLE_PATH, ENV, TAILWIND_CDN } from "@/lib/variables";
+import {
+  CHROMIUM_EXECUTABLE_PATH,
+  ENV,
+  INVOICE_LOGO_PATH,
+  TAILWIND_CDN,
+} from "@/lib/variables";
 
 // Types
 import { InvoiceType } from "@/types";
+
+// Node.js modules
+import fs from "fs";
+import path from "path";
+
+/**
+ * Converts an image to a base64 encoded string.
+ * @param {string} imagePath - The path to the image file.
+ * @returns {Promise<string>} A promise that resolves with the base64 encoded string of the image.
+ */
+function convertImageToBase64(imagePath: string) {
+  return new Promise((resolve, reject) => {
+    const fullPath = path.resolve(imagePath);
+    const fileExtension = path.extname(fullPath).toLowerCase();
+
+    const mimeTypeMap: { [key: string]: string } = {
+      ".png": "image/png",
+      ".jpg": "image/jpeg",
+      ".jpeg": "image/jpeg",
+      ".svg": "image/svg+xml",
+      ".gif": "image/gif",
+      // Add more MIME types as needed
+    };
+
+    const mimeType = mimeTypeMap[fileExtension] || "application/octet-stream";
+
+    fs.readFile(fullPath, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        const base64Image = `data:${mimeType};base64,${data.toString(
+          "base64"
+        )}`;
+        resolve(base64Image);
+      }
+    });
+  });
+}
 
 /**
  * Generate a PDF document of an invoice based on the provided data.
@@ -22,6 +65,19 @@ import { InvoiceType } from "@/types";
  */
 export async function generatePdfService(req: NextRequest) {
   const body: InvoiceType = await req.json();
+
+  if (body.details.invoiceLogo === "") {
+    // now modify the body to include the base64 encoded image
+    const logoBase64 = await convertImageToBase64(INVOICE_LOGO_PATH);
+
+    // console.log("logoBase64:::", logoBase64);
+
+    if (typeof logoBase64 === "string") {
+      body.details.invoiceLogo = logoBase64;
+    }
+  }
+
+  // console.log("body:::", body)
 
   try {
     const ReactDOMServer = (await import("react-dom/server")).default;
@@ -38,13 +94,12 @@ export async function generatePdfService(req: NextRequest) {
     // Create a browser instance
     let browser;
 
-    
     // const puppeteer = await import("puppeteer");
     // browser = await puppeteer.launch({
     //   args: ["--no-sandbox", "--disable-setuid-sandbox"],
     //   headless: "new",
     // });
-    
+
     // Launch the browser in production or development mode depending on the environment
     if (ENV === "production") {
       const puppeteer = await import("puppeteer-core");

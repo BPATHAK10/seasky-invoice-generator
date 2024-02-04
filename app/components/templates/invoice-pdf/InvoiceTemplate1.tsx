@@ -7,7 +7,7 @@ import { InvoiceLayout } from "@/app/components";
 import { formatNumberWithCommas, isDataUrl } from "@/lib/helpers";
 
 // Variables
-import { DATE_OPTIONS } from "@/lib/variables";
+import { DATE_OPTIONS, INVOICE_LOGO_PATH_TEMPLATE } from "@/lib/variables";
 
 import Image from "next/image";
 
@@ -26,22 +26,33 @@ const InvoiceTemplate = (data: InvoiceType) => {
       <div className="text-xl md:text-2xl font-bold text-red-800 mb-4 justify-center">
         INVOICE-EXPORT
       </div>
-      {/* <img 
-        src="/assets/img/seasky-logo.jpg"
-        width={140}
-        height={100}
-        alt="logo of seasky"
-        /> */}
       <div className="flex justify-between">
         <div>
-          {details.invoiceLogo && (
+            {/* <img
+              src={INVOICE_LOGO_PATH_TEMPLATE}
+              width={140}
+              height={100}
+              alt={`Logo of ${sender.name}`}
+            /> */}
+          
+          {details.invoiceLogo !== '' ? (
             <img
               src={details.invoiceLogo}
               width={140}
               height={100}
               alt={`Logo of ${sender.name}`}
             />
-          )}
+          )
+            :
+            (
+              <img
+              src={INVOICE_LOGO_PATH_TEMPLATE}
+              width={140}
+              height={100}
+              alt={`Logo of ${sender.name}`}
+            />
+            )
+        }
           <h1 className="mt-2 text-lg md:text-xl font-semibold text-blue-600">
             {sender.name}
           </h1>
